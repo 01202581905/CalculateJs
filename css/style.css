@@ -1,0 +1,16 @@
+.wraper__content {
+    max-width: 600px;
+    margin: 150px auto;
+    background-color: #ccc;
+}
+.wrapper__content_calc {
+    padding: 20px;
+}
+
+.head_calc {
+    padding: 20px 0;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
