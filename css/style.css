@@ -1,16 +1,87 @@
 .wraper__content {
-    max-width: 600px;
+    max-width: 500px;
     margin: 150px auto;
-    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 10px 10px rgba(194 194 194 / 75%);
+    -moz-box-shadow: 0px 10px 10px 10px rgba(194 194 194 / 75%);
+    box-shadow: 0px 10px 10px 10px rgba(194 194 194 / 75%);
 }
 .wrapper__content_calc {
     padding: 20px;
 }
 
 .head_calc {
-    padding: 20px 0;
-    margin: 10px 0;
     background-color: white;
     border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.head_calc p {
+    font-size: 28px;
+    margin: 10px;
+    padding-top: 30px;
+    text-align: right;
+}
+
+.btn_controll {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.btn_controll button {
+    display: block;
+    padding: 20px 40px;
+    cursor: pointer;
+    outline: none;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    font-size: 28px;
+    color: #505050;
+    border-radius: 5px;
+}
+
+button:hover {
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn_number-result {
+    display: flex;
+    justify-content: space-between;
+}
+.btn_number-result .btn_number {
+    display: flex;
+    width: 73.5%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn_number-result .btn_number button {
+    display: block;
+    padding: 20px 40px;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    font-size: 28px;
+    color: #505050;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.btn_number-result .btn_result {
+    width: calc(26.5% - 25px);
+}
+
+.btn_number-result .btn_result button {
+    height: calc(100% - 20px);
+    width: 100%;
+    background-color: #307cf9;
+    border: 1px solid #307cf9;
+    font-size: 28px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
     border-radius: 5px;
 }
