@@ -58,12 +58,42 @@ result.addEventListener("click", function () {
     const outputString = output.innerHTML;
     let subNumber = outputString.split(/\+|\-|\×|\÷/g);
     let subOperator = outputString.replace(/[0-9]|\./g, "").split("");
+
+
     let divide = subOperator.indexOf("÷");
 
-    console.log(divide, subNumber);
     while (divide != -1) {
-        console.log('run when operators has /');
+        subNumber.splice(divide, 2, subNumber[divide] / subNumber[divide + 1]);
+        subOperator.splice(divide, 1);
+        divide = subOperator.indexOf("÷");
+        console.log(outputString);
     }
+
+    let multiply = subOperator.indexOf("×");
+
+    while (multiply != -1) {
+        subNumber.splice(multiply, 2, subNumber[multiply] * subNumber[multiply + 1]);
+        subOperator.splice(multiply, 1);
+        multiply = subOperator.indexOf("×");
+    }
+
+    let add = subOperator.indexOf("+");
+
+    while (add != -1) {
+        subNumber.splice(add, 2, parseFloat(subNumber[add]) + parseFloat(subNumber[add + 1]));
+        subOperator.splice(add, 1);
+        add = subOperator.indexOf("+");
+    }
+
+    let subtract = subOperator.indexOf("-");
+
+    while (subtract != -1) {
+        subNumber.splice(subtract, 2, subNumber[subtract] - subNumber[subtract + 1]);
+        subOperator.splice(subtract, 1);
+        subtract = subOperator.indexOf("-");
+    }
+    output.innerHTML = subNumber[0];
+    resultDisplay = true;
 });
 
 clear.addEventListener("click", function () {
